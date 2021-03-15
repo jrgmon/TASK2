@@ -1,0 +1,5 @@
+gcloud compute instances create my-instance --source-instance-template example-instance \
+    --machine-type e2-standard-2 --image-family centos-7 --image-project centos-cloud \
+    --metadata bread=butter --disk=boot=no,name=my-override-disk
+
+gcloud compute instances create my-instance --scopes storage-ro --metadata startup-script-url=https://storage.googleapis.com/my-buckets/install-web.sh
